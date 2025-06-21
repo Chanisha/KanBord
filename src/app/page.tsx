@@ -1,29 +1,45 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 bg-white sm:p-20 ">
-      <main className=" gap-[12px]">
+    <div className="relative flex flex-col items-center justify-center min-h-screen bg-white px-4 sm:px-20 pb-40 gap-10 overflow-hidden">
+      <main className="pb-28 pt-5">
+      <Image
+        src="/logo.png"
+        alt=""
+        width={140}
+        height={15}
+        priority
+      />
+      </main>
+
+      <h1 className="text-4xl text-center pb-2 sm:text-5xl font-semi-bold text-black ">
+        Welcome to Kanbord
+      </h1>
+
+
+      <button
+        onClick={() => router.push('/google-auth')}
+        className="flex items-center mb-28 px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700"
+      >
+        Continue with Google
+      </button>
+
+      <div className="absolute bottom-0 left-0 w-full">
         <Image
-          className=""
-          src="/logo.png"
-          alt=""
-          width={180}
-          height={38}
-          priority
-        />
-        </main>
-        <div className="font-bold text-6xl text-black  "> Welcome to Kanbord </div>
-        <main className=" gap-[12px]">
-        <Image
-          className=""
           src="/illustration.png"
           alt=""
-          width={2000}
-          height={100}
+          width={1920}
+          height={300}
+          layout="responsive"
           priority
         />
-        </main>
-        </div>
-        )
-        }
+      </div>
+    </div>
+  );
+}
