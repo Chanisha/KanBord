@@ -9,9 +9,9 @@ import {
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { cn } from "@/lib/utils";
 
-
-export default function GoogleAuthPage() {
+export default function Auth() {
   return (
     <div className="flex min-h-screen">
       <aside className="w-64 bg-white border-r p-6 flex flex-col">
@@ -30,7 +30,6 @@ export default function GoogleAuthPage() {
           <SidebarLink icon={<User className="h-5 w-5" />} label="Profile" />
         </nav>
       </aside>
-
 
       <div className="flex flex-col flex-1">
         <header className="h-16 bg-white border-b flex justify-end items-center px-6">
@@ -65,14 +64,13 @@ function SidebarLink({
   label: string;
   isActive?: boolean;
 }) {
-  const classes = `w-full justify-start gap-2 rounded-md ${
-    isActive ? "bg-blue-100 text-blue-700 font-medium" : "text-gray-700"
-  }`;
-
   return (
     <Button
       variant={isActive ? "secondary" : "ghost"}
-      className={classes}
+      className={cn(
+        "w-full justify-start gap-2 rounded-md",
+        isActive ? "bg-blue-100 text-blue-700 font-medium" : "text-gray-700"
+      )}
     >
       {icon}
       {label}

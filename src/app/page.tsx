@@ -24,7 +24,7 @@ export default function Home() {
 
 
       <button
-        onClick={() => router.push('/google-auth')}
+        onClick={() => router.push('/auth')}
         className="flex items-center mb-28 px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700"
       >
         Continue with Google
