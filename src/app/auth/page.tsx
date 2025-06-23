@@ -14,7 +14,7 @@ export default function Auth() {
       <aside className="w-full md:w-64 bg-white border-b md:border-r md:border-b-0 py-4 md:py-6 px-0 md:px-0 flex flex-row md:flex-col justify-between md:justify-start items-center md:items-stretch">
         <div className="flex items-center md:mb-10">
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt=""
             width={140}
             height={15}
@@ -27,7 +27,7 @@ export default function Auth() {
   <SidebarLink
     icon={
       <Image
-        src="/house.png"
+        src="/House.svg"
         alt=""
         width={20}
         height={20}
@@ -40,7 +40,7 @@ export default function Auth() {
   <SidebarLink
     icon={
       <Image
-        src="/notepencil.png"
+        src="/NotePencil.svg"
         alt=""
         width={20}
         height={20}
@@ -52,7 +52,7 @@ export default function Auth() {
   <SidebarLink
     icon={
       <Image
-        src="/usercircle.png"
+        src="/UserCircle.svg"
         alt=""
         width={20}
         height={20}
@@ -70,7 +70,7 @@ export default function Auth() {
           <div className="flex items-center gap-2 text-sm font-medium">
             John Doe
             <Image
-              src="/avatar.png"
+              src="/Avatar.svg"
               alt=""
               width={20}
               height={20}
@@ -87,7 +87,7 @@ export default function Auth() {
             </p>
             <Button
               onClick={() => toggleModal(true)}
-              className="bg-blue-600 hover:bg-blue-700 text-white sm:w-auto"
+              className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white sm:w-auto"
             >
               Create New Board
             </Button>

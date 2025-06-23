@@ -10,7 +10,7 @@ export default function Home() {
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-white px-4 sm:px-10 md:px-20 lg:px-32 pb-50  gap-8 sm:gap-10 overflow-hidden">
       <main className="pb-5 sm:pt-10">
         <Image
-          src="/logo.png"
+          src="/logo.svg"
           alt=""
           width={140}
           height={15}
