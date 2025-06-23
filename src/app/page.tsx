@@ -7,25 +7,25 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen bg-white px-4 sm:px-20 pb-40 gap-10 overflow-hidden">
-      <main className="pb-28 pt-5">
-      <Image
-        src="/logo.png"
-        alt=""
-        width={140}
-        height={15}
-        priority
-      />
+    <div className="relative flex flex-col items-center justify-center min-h-screen bg-white px-4 sm:px-10 md:px-20 lg:px-32 pb-50  gap-8 sm:gap-10 overflow-hidden">
+      <main className="pb-5 sm:pt-10">
+        <Image
+          src="/logo.png"
+          alt=""
+          width={140}
+          height={15}
+          priority
+        />
       </main>
 
-      <h1 className="text-4xl text-center pb-2 sm:text-5xl font-semi-bold text-black ">
+
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center text-black">
         Welcome to Kanbord
       </h1>
 
-
       <button
-        onClick={() => router.push('/auth')}
-        className="flex items-center mb-28 px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700"
+        onClick={() => router.push("/auth")}
+        className="px-5 py-3 bg-blue-600 text-white text-sm sm:text-base font-medium rounded-md hover:bg-blue-700 transition"
       >
         Continue with Google
       </button>
